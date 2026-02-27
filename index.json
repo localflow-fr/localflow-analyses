@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Annuaire Complet des Campings",
+    "filename": "campings.json",
+    "description": "Analyse exhaustive des campings à proximité incluant l'extraction de l'adresse, du téléphone, de l'e-mail, du site web et du classement en étoiles. Les résultats sont interactifs sur la carte et via un tableau de bord de contact.",
+    "author": "Community",
+    "lastModified": "2026-02-27"
+  },
+  {
+    "name": "Voisinage et Co-visibilité",
+    "filename": "covisibility.json",
+    "description": "Analyse géospatiale du voisinage immédiat (200m). Cette analyse identifie les types de bâtiments et les zones de végétation dense. Elle calcule la co-visibilité en testant si chaque structure est masquée par un obstacle physique (autre bâtiment ou végétation). Les résultats sont présentés par catégorie (Habitation, Commerce, Industrie, Public).",
+    "author": "Community",
+    "lastModified": "2026-02-27"
+  }
+]
