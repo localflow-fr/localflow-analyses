@@ -49,13 +49,14 @@ echo "✅ $INDEX_FILE generated."
 # 2. Update README.md
 echo "📝 Updating $README_FILE..."
 
-# Create table header with Tags column
+# Create the new # Analyses section content
 NEW_SECTION="# Analyses\n\n| Name | Description | Tags | Author | Last Update |\n| :--- | :--- | :--- | :--- | :--- |\n"
-
-# Logic to format tags as `tag1` `tag2` in the README table
 NEW_SECTION+=$(jq -r '.[] | "| **\(.name)** | \(.description) | \(.tags | map("`" + . + "`") | join(" ")) | \(.author) | \(.lastModified) |"' $INDEX_FILE)
 
-sed -i '/^# Analyses/,$d' $README_FILE
-echo -e "$NEW_SECTION" >> $README_FILE
+# Create a temporary version of the README without the old Analyses section
+# Then append the new section and overwrite the original
+sed '/^# Analyses/,$d' "$README_FILE" > "$README_FILE.tmp"
+echo -e "$NEW_SECTION" >> "$README_FILE.tmp"
+mv "$README_FILE.tmp" "$README_FILE"
 
 echo "✅ $README_FILE updated."
