@@ -1,16 +1,97 @@
 [
   {
-    "name": "Annuaire Complet des Campings",
-    "filename": "campings.json",
-    "description": "Analyse exhaustive des campings à proximité incluant l'extraction de l'adresse, du téléphone, de l'e-mail, du site web et du classement en étoiles. Les résultats sont interactifs sur la carte et via un tableau de bord de contact.",
-    "author": "Community",
-    "lastModified": "2026-02-27"
+    "name": "Analyse Emploi",
+    "filename": "analysis - Analyse Immo-Emploi Optimisée - 2026-04-08.json",
+    "description": "Cette analyse montre les emplois accessibles en voiture depuis un point de départ sélectionné, ainsi qu'une estimation du prix au m² dans la zone d'accessibilité.",
+    "author": "Renaud Pawlak Dev481",
+    "lastModified": "2026-04-08",
+    "tags": [
+      "france",
+      "esn",
+      "emploi",
+      "isochrone",
+      "dvf",
+      "francetravail",
+      "interpolation"
+    ]
   },
   {
-    "name": "Voisinage et Co-visibilité",
-    "filename": "covisibility.json",
-    "description": "Analyse géospatiale du voisinage immédiat (200m). Cette analyse identifie les types de bâtiments et les zones de végétation dense. Elle calcule la co-visibilité en testant si chaque structure est masquée par un obstacle physique (autre bâtiment ou végétation). Les résultats sont présentés par catégorie (Habitation, Commerce, Industrie, Public).",
+    "name": "Directory of Nearby Campsites",
+    "filename": "analysis - Annuaire Complet des Campings - 2026-04-08.json",
+    "description": "Exhaustive analysis of nearby campsites including address extraction, phone number, email, website, and star rating. Results are interactive on the map and via a contact dashboard.",
     "author": "Community",
-    "lastModified": "2026-02-27"
+    "lastModified": "2026-04-08",
+    "tags": [
+      "camping",
+      "tourism",
+      "world"
+    ]
+  },
+  {
+    "name": "Bureaux Stratégiques (GE)",
+    "filename": "analysis - Deep-Dive _ Bureaux Stratégiques (GE) - 2026-04-08.json",
+    "description": "Analyse d'intelligence économique sur les bureaux d'ingénierie des grandes entreprises (GE). L'interface offre une interactivité bidirectionnelle complète : cliquer sur un marqueur orange ou sur une ligne du tableau affiche instantanément les dirigeants, les effectifs locaux et une analyse de densité de voisinage (OSM).",
+    "author": "Renaud Pawlak Dev481",
+    "lastModified": "2026-04-08",
+    "tags": [
+      "france",
+      "esn",
+      "grands groupes",
+      "bureaux",
+      "intelligence économique"
+    ]
+  },
+  {
+    "name": "Ingénierie GE : Filtre par Secteur",
+    "filename": "analysis - Ingénierie GE _ Filtre par Secteur - 2026-04-08.json",
+    "description": "Analyse stratégique multisectorielle (Technique, IT, Finance, R&D) focalisée sur les bureaux locaux des grands groupes (GE). L'outil propose un filtrage dynamique par secteur d'activité, synchronisant la visibilité sur la carte et le tableau, avec accès aux effectifs et analyse de densité locale.",
+    "author": "Renaud Pawlak Dev481",
+    "lastModified": "2026-04-08",
+    "tags": [
+      "france",
+      "esn",
+      "grands groupes",
+      "ingénierie"
+    ]
+  },
+  {
+    "name": "Topographical Analysis & Slope (1km²)",
+    "filename": "analysis - Topographie et Pente 1km² (Multi-Provider) - 2026-04-08.json",
+    "description": "Topographical analysis of a 1km² area. Includes contour lines every meter, synchronized cross-section graphs with a real metric scale, and indicators of maximum slope.",
+    "author": "Community",
+    "lastModified": "2026-04-08",
+    "tags": [
+      "world",
+      "topography",
+      "slope",
+      "isobands",
+      "isoclines"
+    ]
+  },
+  {
+    "name": "Neighborhood & Co-Visibility Analysis",
+    "filename": "analysis - Voisinage et Co-visibilité (Multi-Map) - 2026-04-08.json",
+    "description": "This cartographic analysis identifies all buildings and vegetation areas within a 200-meter radius around a selected point. It then calculates the line of sight towards each neighboring building to determine whether it is visible or obstructed by other structures, providing an essential co-visibility indicator for impact studies or neighborhood assessments. Compatible with Google Maps and Leaflet.",
+    "author": "Community",
+    "lastModified": "2026-04-08",
+    "tags": [
+      "world",
+      "visibility",
+      "line-of-sight",
+      "urban",
+      "cartography"
+    ]
+  },
+  {
+    "name": "Établissements locaux (Rayon 50km)",
+    "filename": "analysis - Établissements locaux (Rayon 50km) - 2026-04-08.json",
+    "description": "Cette analyse identifie les établissements physiques (agences, magasins, bureaux) situés dans un rayon de 50 km. Contrairement à une recherche classique qui peut pointer vers le siège social national, cette version utilise les coordonnées exactes de chaque établissement local pour garantir la pertinence géographique.",
+    "author": "Renaud Pawlak Dev481",
+    "lastModified": "2026-04-08",
+    "tags": [
+      "france",
+      "esn",
+      "établissements locaux"
+    ]
   }
 ]

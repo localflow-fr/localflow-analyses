@@ -6,31 +6,40 @@ INDEX_FILE="index.json"
 README_FILE="README.md"
 TEMP_INDEX="index.tmp.json"
 
+if [ ! -d "$ANALYSES_DIR" ]; then
+    echo "❌ Directory $ANALYSES_DIR not found."
+    exit 1
+fi
+
 echo "[]" > $TEMP_INDEX
+echo "🚀 Generating index with tags..."
 
-echo "🚀 Generating index from $ANALYSES_DIR..."
-
-# 1. Build the index.json
 for file in "$ANALYSES_DIR"/*.json; do
+    [ -e "$file" ] || continue
     filename=$(basename "$file")
     
-    # Extract data using jq
-    # We parse the file, then parse the nested string in LocalFlow__Content__c
-    name=$(jq -r '.Name' "$file")
-    content_json=$(jq -r '.LocalFlow__Content__c' "$file")
-    description=$(echo "$content_json" | jq -r '.description')
-    author="Community" # Default author, or extract if available
+    title=$(jq -r '.title // "Untitled Analysis"' "$file")
+    description=$(jq -r '.description // "No description provided."' "$file")
+    
+    # Extract tags as a JSON array (defaults to empty array)
+    tags=$(jq -c '.tags // []' "$file")
+    
+    # Author parsing logic
+    raw_owner=$(jq -r '.ownerId // "Community"' "$file" | cut -d'@' -f1)
+    author=$(echo "$raw_owner" | sed 's/\./ /g' | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
+    
     last_mod=$(date -r "$file" +"%Y-%m-%d")
 
-    echo "  - Processing: $name"
+    echo "  - Processing: $title (Tags: $tags)"
 
-    # Append to temporary JSON array
-    jq --arg name "$name" \
+    # Append to temporary JSON array including tags
+    jq --arg name "$title" \
        --arg file "$filename" \
        --arg desc "$description" \
        --arg auth "$author" \
        --arg date "$last_mod" \
-       '. += [{name: $name, filename: $file, description: $desc, author: $auth, lastModified: $date}]' \
+       --argjson tags "$tags" \
+       '. += [{name: $name, filename: $file, description: $desc, author: $auth, lastModified: $date, tags: $tags}]' \
        $TEMP_INDEX > tmp.json && mv tmp.json $TEMP_INDEX
 done
 
@@ -40,12 +49,12 @@ echo "✅ $INDEX_FILE generated."
 # 2. Update README.md
 echo "📝 Updating $README_FILE..."
 
-# Create the new # Analysis section content
-NEW_SECTION="# Analysis\n\n| Name | Description | Author | Last Update |\n| :--- | :--- | :--- | :--- |\n"
-NEW_SECTION+=$(jq -r '.[] | "| **\(.name)** | \(.description) | \(.author) | \(.lastModified) |"' $INDEX_FILE)
+# Create table header with Tags column
+NEW_SECTION="# Analyses\n\n| Name | Description | Tags | Author | Last Update |\n| :--- | :--- | :--- | :--- | :--- |\n"
 
-# Use sed to delete everything from "# Analysis" to the end of file, then append new section
-# We create a temporary readme to avoid corruption
+# Logic to format tags as `tag1` `tag2` in the README table
+NEW_SECTION+=$(jq -r '.[] | "| **\(.name)** | \(.description) | \(.tags | map("`" + . + "`") | join(" ")) | \(.author) | \(.lastModified) |"' $INDEX_FILE)
+
 sed -i '/^# Analyses/,$d' $README_FILE
 echo -e "$NEW_SECTION" >> $README_FILE
 
