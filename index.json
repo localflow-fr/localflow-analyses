@@ -39,10 +39,10 @@
   },
   {
     "name": "Bureaux Stratégiques (GE)",
-    "filename": "analysis-Bureaux-Stratégiques-GE-2026-04-08.json",
+    "filename": "analysis-Bureaux-Strategiques-GE-2026-04-08.json",
     "description": "Analyse d'intelligence économique sur les bureaux d'ingénierie des grandes entreprises (GE). L'interface offre une interactivité bidirectionnelle complète : cliquer sur un marqueur orange ou sur une ligne du tableau affiche instantanément les dirigeants, les effectifs locaux et une analyse de densité de voisinage (OSM).",
     "author": "Renaud Pawlak Dev481",
-    "lastModified": "2026-04-08",
+    "lastModified": "2026-04-09",
     "tags": [
       "france",
       "esn",
