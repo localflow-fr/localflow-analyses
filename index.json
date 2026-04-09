@@ -1,15 +1,16 @@
 [
   {
-    "name": "Topographie 3D Interactive",
+    "name": "3D Topography Analysis",
     "filename": "analysis-3d-interactive-topography-2026-04-09.json",
-    "description": "Interactive topographical analysis. 3D modeling of the relief on 1km, dynamic cross-sections and slope calculation.",
+    "description": "Interactive topographical analysis with 3D modeling of the relief over 1km.",
     "author": "Renaud Pawlak",
     "lastModified": "2026-04-09",
     "tags": [
       "world",
-      "topographie",
-      "3D",
-      "analyse spatiale"
+      "topography",
+      "3d",
+      "elevation",
+      "slope"
     ]
   },
   {
