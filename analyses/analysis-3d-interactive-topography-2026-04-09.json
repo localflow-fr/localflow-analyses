@@ -299,8 +299,8 @@
     "",
     "return { html, data: { center, refAlt }, reset: clearLayer };"
   ],
-  "description": "Analyse topographique interactive multi-fournisseur (Google/Leaflet). Modélisation 3D du relief sur 1km, coupes transversales dynamiques et calcul de pente.",
-  "title": "Topographie 3D Interactive (Multi-Map)",
+  "description": "Interactive topographical analysis. 3D modeling of the relief on 1km, dynamic cross-sections and slope calculation.",
+  "title": "Topographie 3D Interactive",
   "output": {
     "center": "object {lat, lng}",
     "refAlt": "number (altitude au centre)"

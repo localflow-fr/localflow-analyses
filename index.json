@@ -1,8 +1,8 @@
 [
   {
-    "name": "Topographie 3D Interactive (Multi-Map)",
+    "name": "Topographie 3D Interactive",
     "filename": "analysis-3d-interactive-topography-2026-04-09.json",
-    "description": "Analyse topographique interactive multi-fournisseur (Google/Leaflet). Modélisation 3D du relief sur 1km, coupes transversales dynamiques et calcul de pente.",
+    "description": "Interactive topographical analysis. 3D modeling of the relief on 1km, dynamic cross-sections and slope calculation.",
     "author": "Renaud Pawlak",
     "lastModified": "2026-04-09",
     "tags": [
