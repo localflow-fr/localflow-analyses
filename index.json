@@ -3,7 +3,7 @@
     "name": "3D Topography Analysis",
     "filename": "analysis-3d-interactive-topography-2026-04-09.json",
     "description": "Interactive topographical analysis with 3D modeling of the relief over 1km.",
-    "author": "Renaud Pawlak",
+    "author": "Benoit Terrasa",
     "lastModified": "2026-04-09",
     "tags": [
       "world",
@@ -23,6 +23,18 @@
       "camping",
       "tourism",
       "world"
+    ]
+  },
+  {
+    "name": "Audit Parcellaire",
+    "filename": "analysis-Audit-Parcellaire-2026-04-09.json",
+    "description": "Analyse foncière : la parcelle auditée affiche son zonage PLU, bâti réel et non bâti.",
+    "author": "Benoit Terrasa",
+    "lastModified": "2026-04-09",
+    "tags": [
+      "france",
+      "parcelle",
+      "foncier"
     ]
   },
   {
