@@ -1,5 +1,18 @@
 [
   {
+    "name": "Topographie 3D Interactive (Multi-Map)",
+    "filename": "analysis-3d-interactive-topography-2026-04-09.json",
+    "description": "Analyse topographique interactive multi-fournisseur (Google/Leaflet). Modélisation 3D du relief sur 1km, coupes transversales dynamiques et calcul de pente.",
+    "author": "Renaud Pawlak",
+    "lastModified": "2026-04-09",
+    "tags": [
+      "world",
+      "topographie",
+      "3D",
+      "analyse spatiale"
+    ]
+  },
+  {
     "name": "Directory of Nearby Campsites",
     "filename": "analysis-Annuaire-Campings-2026-04-08.json",
     "description": "Exhaustive analysis of nearby campsites including address extraction, phone number, email, website, and star rating. Results are interactive on the map and via a contact dashboard.",

@@ -21,6 +21,7 @@ To add a new analysis:
 
 | Name | Description | Tags | Author | Last Update |
 | :--- | :--- | :--- | :--- | :--- |
+| **Topographie 3D Interactive (Multi-Map)** | Analyse topographique interactive multi-fournisseur (Google/Leaflet). Modélisation 3D du relief sur 1km, coupes transversales dynamiques et calcul de pente. | `world` `topographie` `3D` `analyse spatiale` | Renaud Pawlak | 2026-04-09 |
 | **Directory of Nearby Campsites** | Exhaustive analysis of nearby campsites including address extraction, phone number, email, website, and star rating. Results are interactive on the map and via a contact dashboard. | `camping` `tourism` `world` | Community | 2026-04-08 |
 | **Bureaux Stratégiques (GE)** | Analyse d'intelligence économique sur les bureaux d'ingénierie des grandes entreprises (GE). L'interface offre une interactivité bidirectionnelle complète : cliquer sur un marqueur orange ou sur une ligne du tableau affiche instantanément les dirigeants, les effectifs locaux et une analyse de densité de voisinage (OSM). | `france` `esn` `grands groupes` `bureaux` `intelligence économique` | Renaud Pawlak Dev481 | 2026-04-08 |
 | **Ingénierie GE : Filtre par Secteur** | Analyse stratégique multisectorielle (Technique, IT, Finance, R&D) focalisée sur les bureaux locaux des grands groupes (GE). L'outil propose un filtrage dynamique par secteur d'activité, synchronisant la visibilité sur la carte et le tableau, avec accès aux effectifs et analyse de densité locale. | `france` `esn` `grands groupes` `ingénierie` | Renaud Pawlak Dev481 | 2026-04-08 |
